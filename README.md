@@ -1,9 +1,9 @@
-#const and the "&" usage in c++ 
+# const and the "&" usage in c++ 
 
-#first, const keyword usage
+## first, const keyword usage
 
 const keyword is used to make an element const in the program; 
-*1: const variables; if we set a variable to be const, we aren't allowed to change its value later, we also have to initialize it while declaration.
+- 1: const variables; if we set a variable to be const, we aren't allowed to change its value later, we also have to initialize it while declaration.
 
 ex :
 
@@ -14,7 +14,7 @@ c = "r"; ERROR!!!
 ```
 
 
-*2: const pointers; 1st; the pointer is pointing to a const variable, used to make array elements or a string immutable or in another meaning cannot be changed; this type can be writtin as:
+- 2: const pointers; 1st; the pointer is pointing to a const variable, used to make array elements or a string immutable or in another meaning cannot be changed; this type can be writtin as:
 
 ```
 
@@ -48,7 +48,7 @@ note that:we also can have a const pointer points to a const var as const int* c
 
 
 
-3rd; function arguments and return types as following 
+- 3rd; function arguments and return types as following 
 
 ```
 
@@ -66,7 +66,7 @@ void g (const int*){ }.
 
 ```
 
-4th; const class data members--> in this case the vriables are not initialized during declaration but it's 
+- 4th; const class data members--> in this case the vriables are not initialized during declaration but it's 
 done in the constructor. 
 
 ```
@@ -78,7 +78,7 @@ class meo(){
 
 ```
 
-5th; defining class obj as const--> data members of the object can never be changed
+- 5th; defining class obj as const--> data members of the object can never be changed
 
 ```
 
@@ -86,23 +86,23 @@ const class_name object
 
 ```
 
-6th; defining class's member function as const--> const member functions never modifies data members in an 
+- 6th; defining class's member function as const--> const member functions never modifies data members in an 
 object
 
-  ```
+```
 
 return_type function_name() const; 
 
 ```
 
 +THIS IS ALL WE HAVE FOR THE CONST KEYWORD, NOW LET'S DISCUSS THE & OPERATOR+
-#"&" usage
--as a conditional exp;
+##  "&" usage
+- as a conditional exp;
 && operator is a logical operator, it gives true only if all operands are true ,else, its result is false -->  
 the logical AND represented as ‘&&’ operator in C or C++ returns true when both the conditions under 
 consideration are satisfied. Otherwise, it returns false. Therefore, a && b returns true when both a and b are 
 true
--ampersand symbol & is used in C++ as a reference declarator in addition to being the address operator
+- ampersand symbol & is used in C++ as a reference declarator in addition to being the address operator
 
 ```
 
@@ -115,11 +115,11 @@ void f(int*& p);      // p is a reference to a pointer
 ```
 
 
--You can use the & operator with overloaded functions only in an initialization or assignment where the left 
+- You can use the & operator with overloaded functions only in an initialization or assignment where the left 
 side uniquely determines which version of the overloaded function is used.
 
 
--& to declare a reference to a type
+- & to declare a reference to a type
 if & is at the left of var(in this case it must be used in variable declaration), that means you expect a 
 refrence to the declared type.
 
@@ -132,7 +132,7 @@ std::string& hero = batman;
 
 batman and hero have the same value, also points to the same place in the memory
 
-& to get the address of a variable
+- & to get the address of a variable
 if the & is on the right side of var, it's known as the "address-of operator", it can be used in assignments 
 too in this case, anyway, if we put it in front of var, it will return the address of this var in the memory,
 not the value.
@@ -147,12 +147,12 @@ hero = &batman;
 ```
 
 //next part is copied just as more info about the &&
--&& for declaring rvalue ref.
+- && for declaring rvalue ref.
 "An lvalue (locator value) represents an object that occupies some identifiable location in memory (i.e. has an address).
 rvalues are defined by exclusion, by saying that every expression is either an lvalue or an rvalue. Therefore, from the above definition of lvalue, an rvalue is an expression that does not represent an object occupying some identifiable location in memory." 
 both declaring rvalue and universal ref should have && after type, but,if type deduction takes place, you declare a universal reference, if not an rvalue reference.
 
--&& for declaring a universal ref 
+- && for declaring a universal ref 
 
 ```
 
@@ -168,7 +168,7 @@ void f(T&& param); // type deduction occurs, so this is a universal reference!
 
 ```
 
--& or && for function overloading
+- & or && for function overloading
 it's used when you'd like to optimize your memory footprint by taking advantage of move semantics. 
 ex 
 
@@ -195,7 +195,7 @@ makeTool().doSomething(); // Tool::doSomething && is called
 
 
 
-references :
+# references :
 https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga
 https://www.tutorialcup.com/cprogramming/constant-pointers.htm
 https://www.studytonight.com/cpp/const-keyword.php
